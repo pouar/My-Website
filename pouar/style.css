@@ -1,0 +1,31 @@
+#top{
+	height:40px;
+	background:#000;
+	border-bottom:5px #700 solid;
+	width:100%;
+	margin:0;
+	padding: 20px 0px;;
+}
+a.toplink
+{
+	color:#fff;
+}
+#links{
+	height:40px;
+list-style-type:none;
+margin:0;
+	color:#fff;
+	position:absolute;
+	right:0px;
+	top:0px;
+	display: inline; 
+}
+li{
+	padding:0px 5px;
+	display: inline; 
+}
+body
+{
+	margin:0px;
+	background:#999;
+}
