@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
 <title>Welcome To My Website</title>
 <script type='text/javascript' 
-        src='jquery-1.7.2.min.js'>
+        src='jquery-1.8.0.min.js'>
     </script>
     <script>
         $(function() {
