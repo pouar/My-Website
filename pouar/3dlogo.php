@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
 <link rel="stylesheet" type="text/css" href="doc.css" /></head>
 <body style="">
-        <script src="three.min.js">
+        <script src="https://raw.githubusercontent.com/mrdoob/three.js/fa4e4ae77fe5a1f9506a91160cc7a9f4e61518fc/build/three.min.js">
         </script>
         <script>
             window.requestAnimFrame = (function(callback){
