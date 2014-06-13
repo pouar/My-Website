@@ -1,5 +1,11 @@
 <?hh
-$root='http://'.$_SERVER['HTTP_HOST'].'/pouar/';
+
+if (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off') {
+	$root='http://'.$_SERVER['HTTP_HOST'].'/pouar/';
+}
+else {
+	$root='http://'.$_SERVER['HTTP_HOST'].'/pouar/';
+}
 echo "<rss version=\"2.0\"><channel><title>Pouar's Site Updates</title><description>what the title said</description><link>{$root}</link><image><url>{$root}marioskatehq4x.png</url><title>Pouar's Site</title><link>{$root}</link></image>";
 $items = [
 ["2014-06-09 15:40", "Mon 9 Jun 2014 15:40:00 -0500", "publish"],
