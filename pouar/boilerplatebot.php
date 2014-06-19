@@ -1,10 +1,10 @@
 <?hh
 $poweredby = [
-["http://www.nginx.org ", "nginx-logo.png"],
-["http://hhvm.com", "hhvm.png"],
-["http://hacklang.org", "hack.png"],
-["href=http://www.php.net", "220px-PHP-logo.svg.png"],
-["href=http://www.centos.org", "centos-logo-light.png"],
+["http://www.nginx.org ", "/pouar/nginx-logo.png"],
+["http://hhvm.com", "/pouar/hhvm.png"],
+["http://hacklang.org", "/pouar/hack.png"],
+["href=http://www.php.net", "/pouar/220px-PHP-logo.svg.png"],
+["href=http://www.centos.org", "/pouar/centos-logo-light.png"],
 ];
 echo '<div style="position:fixed;bottom:0px;right:0px;';
 if(isset($_GET['hidepb']))
