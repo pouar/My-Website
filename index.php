@@ -14,7 +14,25 @@ echo '<table style="width:100%">';
 	echo '<tr><th class=td>file</th><th class=td>file size</th><th class=td>mtime</th></tr>';
 foreach($files as $i)
 {
-	echo '<tr><td class=td><a href="'.$i.'">'.$i.'</a></td><td class=td>'.(filesize($i)/1024).' kb</td><td class=td>'.date('r',filemtime($i)).'</td></tr>';
+	echo '<tr><td class=td><a href="'.$i.'">'.$i.'</a></td><td class=td>';
+	$filesize=filesize($i);
+	if($filesize>=1024000000)
+	{
+		echo ($filesize/1024000000).' GB';
+	}
+	else if($filesize>=1024000)
+	{
+		echo ($filesize/1024000).' MB';
+	}
+	else if($filesize>=1024)
+	{
+		echo ($filesize/1024).' KB';
+	}
+	else
+	{
+		echo $filesize.' Bytes';
+	}
+	echo '</td><td class=td>'.date('r',filemtime($i)).'</td></tr>';
 }
 echo '</table></div>';
 include_once $_SERVER['DOCUMENT_ROOT'].'pouar/boilerplatebot.php';
