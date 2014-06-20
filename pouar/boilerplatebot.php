@@ -14,6 +14,6 @@ if(isset($_GET['hidepb']))
 echo '">Powered by<br>';
 foreach($poweredby as list($i, $j))
 {
-	echo '<a href="'.$i.'"><img src="'.$j.'" height=50 /></a>';
+	echo '<a href="'.$i.'"><img src="'.$j.'" height=50 alt="image" /></a>';
 }
 echo '<br><a href="'.$_SERVER['PATH_INFO'].'?hidepb">click to hide this</a></div></body></html>'; 
