@@ -5,12 +5,74 @@ if (!empty($_SERVER['HTTPS'])) {
 else {
 	$root='http://'.$_SERVER['HTTP_HOST'].'/pouar/';
 }
-echo "<rss version=\"2.0\"><channel><title>Pouar's Blog</title><description>what the title said</description><link>{$root}</link><image><url>{$root}marioskatehq4x.png</url><title>Pouar's Site</title><link>{$root}</link></image>";
+echo "<rss version=\"2.0\">
+	<channel>
+		<title>
+			Pouar's Blog
+		</title>
+		<description>
+			what the title said
+		</description>
+		<link>
+			{$root}
+		</link>
+		<image>
+			<url>
+				{$root}marioskatehq4x.png
+			</url>
+			<title>
+				Pouar's Site
+			</title>
+			<link>
+				{$root}
+			</link>
+		</image>";
 $items = [
-["2014-06-17 19:39", "Tue, 17 Jun 2014 19:39:00 -0500", "About time I made use of this. For my first post I wanted to mention an illumos distro called <a href=".rawurlencode('http://sonicle.com/index.jsp?pagename=xstreamos&parent=products').">XStreamOS</a>, which has given me new hope in the post-sun world of Solaris. XStreamOS is made by Sonicle, who seems to be focused in web development and infrastructure. They said they've delivered solutions for clients on Solaris 8 9 &amp; 10, and when Oracle bought out Sun they decided to make their own OS based off of illumos. Anyway I tried out the XStream Desktop which seems to be based off of LXDE, which is an awesone desktop environment by the way. The XStream Desktop is the Desktop version. One reason I like it is it doesn't use the old Java Desktop but something more modern. They Haven't release all the sources but they seem to plan to, the sources they've released so far are <a href=".rawurlencode('https://github.com/sonicle/').'>here</a>. It looks very promising and I plan on keeping an eye on its development <br><a href="'.$root.'blog/xstreamos1.png"><img src="'.$root.'blog/xstreamos1.png" height="150" alt=Image></a><a href="'.$root.'blog/xstreamos2.png" ><img src="'.$root.'blog/xstreamos2.png" height="150" alt=Image></a><a href="'.$root.'blog/xstreamos3.jpg"><img src="'.$root.'blog/xstreamos3.jpg" height="150" alt=Image></a><a href="'.$root.'blog/xstreamos4.jpg"><img src="'.$root.'blog/xstreamos4.jpg" height="150" alt=Image></a><a href="'.$root.'blog/xstreamos5.png"><img src="'.$root.'blog/xstreamos5.png" height="150" alt=Image></a>'],
+["PSA", "Tue, 17 Jun 2014 19:39:00 -0500", "There's a really cool illumos distro called OpenSXCE that has loads of potential, but it's currently a one man job (It's actually amazing he got it this far). Martin Bochnig , the guy who put it together, invested a shitload (to put it mildly) of time nad money into this. What I'm asking is if you're a Solaris/illumos developer, please help him out. Also donate if you can."],
+["XStreamOS", "Tue, 17 Jun 2014 19:39:00 -0500", "About time I made use of this. For my first post I wanted to mention an illumos distro called <a href=".rawurlencode('http://sonicle.com/index.jsp?pagename=xstreamos&parent=products').">XStreamOS</a>, which has given me new hope in the post-sun world of Solaris. XStreamOS is made by Sonicle, who seems to be focused in web development and infrastructure. They said they've delivered solutions for clients on Solaris 8 9 &amp; 10, and when Oracle bought out Sun they decided to make their own OS based off of illumos. Anyway I tried out the XStream Desktop which seems to be based off of LXDE, which is an awesone desktop environment by the way. The XStream Desktop is the Desktop version. One reason I like it is it doesn't use the old Java Desktop but something more modern. They Haven't release all the sources but they seem to plan to, the sources they've released so far are <a href=".rawurlencode('https://github.com/sonicle/').'>here</a>. It looks very promising and I plan on keeping an eye on its development <br><a href="'.$root.'blog/xstreamos1.png"><img src="'.$root.'blog/xstreamos1.png" height="150" alt=Image></a><a href="'.$root.'blog/xstreamos2.png" ><img src="'.$root.'blog/xstreamos2.png" height="150" alt=Image></a><a href="'.$root.'blog/xstreamos3.jpg"><img src="'.$root.'blog/xstreamos3.jpg" height="150" alt=Image></a><a href="'.$root.'blog/xstreamos4.jpg"><img src="'.$root.'blog/xstreamos4.jpg" height="150" alt=Image></a><a href="'.$root.'blog/xstreamos5.png"><img src="'.$root.'blog/xstreamos5.png" height="150" alt=Image></a>'],
 ];
-foreach($items as list($i, $j, $k))
+if(isset($_GET['all']))
 {
-	echo "<item><title>".$i."</title><pubDate>".$j."</pubDate><link>{$root}</link><description><![CDATA[".$k."]]></description></item>";
+	foreach($items as list($i, $j, $k))
+	{
+		echo "
+		<item>
+			<title>
+				{$i}
+			</title>
+			<pubDate>
+				{$j}
+			</pubDate>
+			<link>
+				{$root}
+			</link>
+			<description>
+				<![CDATA[{$k}]]>
+			</description>
+		</item>";
+	}
 }
-echo "</channel></rss>";
+else
+{
+	for($i=0;$i<5;$i++)
+	{
+		echo "
+		<item>
+			<title>
+				{$items[$i][0]}
+			</title>
+			<pubDate>
+				{$items[$i][1]}
+			</pubDate>
+			<link>
+				{$root}
+			</link>
+			<description>
+				<![CDATA[{$items[$i][2]}]]>
+			</description>
+		</item>";
+	}
+}
+echo "
+	</channel>
+</rss>";

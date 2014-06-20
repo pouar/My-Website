@@ -6,14 +6,26 @@ $poweredby = [
 ["href=http://www.php.net", "/pouar/220px-PHP-logo.svg.png"],
 ["href=http://www.centos.org", "/pouar/centos-logo-light.png"],
 ];
-echo '<div style="position:fixed;bottom:0px;right:0px;';
+echo "
+		<div style=\"position:fixed;bottom:0px;right:0px;";
 if(isset($_GET['hidepb']))
 {
 	echo 'display:none;';
 }
-echo '">Powered by<br>';
+echo "\">
+			Powered by<br>";
 foreach($poweredby as list($i, $j))
 {
-	echo '<a href="'.$i.'"><img src="'.$j.'" height=50 alt="image" /></a>';
+	echo "
+			<a href=\"{$i}\">
+				<img src=\"{$j}\" height=50 alt=\"image\" >
+			</a>";
 }
-echo '<br><a href="'.$_SERVER['PATH_INFO'].'?hidepb">click to hide this</a></div></body></html>'; 
+echo "
+			<br>
+			<a href=\"{$_SERVER['PATH_INFO']}?hidepb\">
+				click to hide this
+			</a>
+		</div>
+	</body>
+</html>"; 

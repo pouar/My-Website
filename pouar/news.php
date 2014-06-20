@@ -6,7 +6,28 @@ if (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off') {
 else {
 	$root='http://'.$_SERVER['HTTP_HOST'].'/pouar/';
 }
-echo "<rss version=\"2.0\"><channel><title>Pouar's Site Updates</title><description>what the title said</description><link>{$root}</link><image><url>{$root}marioskatehq4x.png</url><title>Pouar's Site</title><link>{$root}</link></image>";
+echo "<rss version=\"2.0\">
+	<channel>
+		<title>
+			Pouar's Site Updates
+		</title>
+		<description>
+			what the title said
+		</description>
+		<link>
+			{$root}
+		</link>
+		<image>
+			<url>
+				{$root}marioskatehq4x.png
+			</url>
+			<title>
+				Pouar's Site
+			</title>
+			<link>
+				{$root}
+			</link>
+		</image>";
 $items = [
 ["2014-06-13 16:54", "Fri, 13 Jun 2014 16:54:00 -0500", "Moved all external images to server and adjusted paths so now when using HTTPS everything gets encrypted"],
 ["2014-06-09 15:40", "Mon, 9 Jun 2014 15:40:00 -0500", "publish"],
@@ -17,6 +38,22 @@ $items = [
 ];
 foreach($items as list($i, $j, $k))
 {
-	echo "<item><title>".$i."</title><pubDate>".$j."</pubDate><link>{$root}</link><description><![CDATA[".$k."]]></description></item>";
+	echo "
+		<item>
+			<title>
+				{$i}
+			</title>
+			<pubDate>
+				{$j}
+			</pubDate>
+			<link>
+				{$root}
+			</link>
+			<description>
+				<![CDATA[{$k}]]>
+			</description>
+		</item>";
 }
-echo "</channel></rss>";
+echo "
+	</channel>
+</rss>";
