@@ -7,25 +7,19 @@ $poweredby = [
 ["href=http://www.centos.org", "/pouar/centos-logo-light.png"],
 ];
 echo "
-		<div style=\"position:fixed;bottom:0px;right:0px;";
-if(isset($_GET['hidepb']))
-{
-	echo 'display:none;';
-}
-echo "\">
+				</td>
+			</tr>
+		</table>
+		<div style=\"float: right;\">
 			Powered by<br>";
 foreach($poweredby as list($i, $j))
 {
 	echo "
-			<a href=\"{$i}\">
-				<img src=\"{$j}\" height=50 alt=\"image\" >
+			<a href=\"{$i}\" style=\"background-color:initial;\">
+				<img class=\"thumbnail\" style=\"display:initial;\" src=\"{$j}\" height=50 alt=\"image\" >
 			</a>";
 }
 echo "
-			<br>
-			<a href=\"{$_SERVER['PATH_INFO']}?hidepb\">
-				click to hide this
-			</a>
 		</div>
 	</body>
 </html>"; 
