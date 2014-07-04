@@ -28,7 +28,7 @@ foreach($toplinks as list($i, $j))
 {
 	echo "
 					<div style=\"width:270px\">
-					<a class=\"btn\"  href=\"{$i}\">{$j}</a>
+					<a class=\"btn btn-primary btn-large\"  href=\"{$i}\">{$j}</a>
 					</div>";
 }
 echo '
