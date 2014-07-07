@@ -29,6 +29,7 @@ echo "<rss version=\"2.0\">
 			</link>
 		</image>";
 $items = [
+["2014-07-07 11:05", "Mon, 07 Jul 2014 11:05:00 -0500", "In case my repo on Github gets hit with collateral damage from some overbroad/automated DMCA notice, you can download my repo from http://thepouar.dnsdojo.com/git/site.git"],
 ["2014-07-03 19:41", "Thu, 03 Jul 2014 19:41:00 -0500", "New site theme I found https://kristopolous.github.io/BOOTSTRA.386/"],
 ["2014-06-13 16:54", "Fri, 13 Jun 2014 16:54:00 -0500", "Moved all external images to server and adjusted paths so now when using HTTPS everything gets encrypted"],
 ["2014-06-09 15:40", "Mon, 9 Jun 2014 15:40:00 -0500", "publish"],
