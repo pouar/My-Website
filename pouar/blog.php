@@ -28,6 +28,7 @@ if (!empty($_GET['index']))
 				{$news->channel->item[(count($news->channel->item)-$i)]->title}
 			</h4><br>
 			{$news->channel->item[(count($news->channel->item)-$i)]->description}<br>";
+// echo "<a href=\"blog.php?index=".($_GET['index']-1)."\">prev</a>&#x20;&#x20;&#x20;<a href=\"blog.php?index=".($_GET['index']+1)."\">next</a>";
 }
 else if(!empty($_GET['page']))
 {
@@ -50,7 +51,7 @@ else
 			</h4><br>
 			{$news->channel->item[$i]->description}<br>";
 	}
+// echo "<a href=\"blog.php?index=".(count($news->channel->item))."\">browse</a>";
 }
-echo "
-		</div>";
+echo "        </div>";
 include_once "boilerplatebot.php";
