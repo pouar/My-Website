@@ -12,7 +12,7 @@ echo '<!doctype html>
 		}
 	</style>
 ';
-include_once $_SERVER['DOCUMENT_ROOT'].'pouar/boilerplatetop.php';
+include_once $_SERVER['DOCUMENT_ROOT'].'/pouar/boilerplatetop.php';
 $files = scandir('.');
 echo "\n\t\t<div id=news style=\"position:relative;margin:50px;\">\n\t\t\t<h3 style=\"display:inline\">{$_SERVER['REQUEST_URI']}</h3>\n\t\t\t<hr>\n\t\t\t".php_uname();
 echo '
