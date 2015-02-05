@@ -14,7 +14,7 @@ echo "
 				{$news->channel->title}
 			</h3>
 			<a href=news.php style=\"display:inline;right:0px;position:absolute;\">
-				<img  class=\"thumbnail\" src=Rss-icon.png alt=\"image\">
+				<img src=Rss-icon.png alt=\"image\">
 			</a>
 			<hr>
 			".php_uname();
