@@ -16,7 +16,7 @@ foreach($poweredby as list($i, $j))
 {
 	echo "
 			<a href=\"{$i}\" style=\"background-color:initial;\">
-				<img class=\"thumbnail\" style=\"display:initial;\" src=\"{$j}\" height=50 alt=\"image\" >
+				<img style=\"display:initial;\" src=\"{$j}\" height=50 alt=\"image\" >
 			</a>";
 }
 echo "

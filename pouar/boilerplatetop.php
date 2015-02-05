@@ -15,14 +15,14 @@ $toplinks = [
 ];
 echo '		<meta charset="UTF-8">
 		<link rel="icon" type="image/png" href="/pouar/marioskate.png" />
-		<link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.css">
 	</head>
 	<body>
 		<table>
 			<tr>
 				<td>
 					<a href=/pouar/ style="background-color:initial;">
-						<img style="display:block;" class="thumbnail" src=/pouar/marioskatehq2x.png alt="image">
+						<img style="display:block;" src=/pouar/marioskatehq2x.png alt="image">
 					</a>';
 foreach($toplinks as list($i, $j))
 {
