@@ -64,4 +64,4 @@ foreach($files as $i)
 echo '
 			</table>
 		</div>';
-include_once $_SERVER['DOCUMENT_ROOT'].'pouar/boilerplatebot.php';
+include_once $_SERVER['DOCUMENT_ROOT'].'/pouar/boilerplatebot.php';

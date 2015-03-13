@@ -12,6 +12,7 @@ $toplinks = [
 ["/bugzilla", "Bug Tracker"],
 ["/forum", "forum"],
 ["https://github.com/pouar/My-Website", "Github"],
+["/cgit", "cgit"],
 ];
 echo '		<meta charset="UTF-8">
 		<link rel="icon" type="image/png" href="/pouar/marioskate.png" />
