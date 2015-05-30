@@ -13,6 +13,7 @@ $toplinks = [
 ["/forum", "forum"],
 ["https://github.com/pouar/My-Website", "Github"],
 ["/cgit", "cgit"],
+["/drupal", "Drupal"],
 ];
 echo '		<meta charset="UTF-8">
 		<link rel="icon" type="image/png" href="/pouar/marioskate.png" />
