@@ -1,4 +1,4 @@
-<?hh
+<?php
 
 if (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off') {
 	$root='http://'.$_SERVER['HTTP_HOST'].'/pouar/';

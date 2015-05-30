@@ -1,4 +1,4 @@
-<?hh
+<?php
 echo '<!doctype html><html><head><title>Blog</title>';
 include_once "boilerplatetop.php";
 ob_start();

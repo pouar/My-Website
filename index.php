@@ -1,4 +1,4 @@
-<?hh
+<?php
 echo '<!doctype html>
 <html>
 	<head>

@@ -1,4 +1,4 @@
-<?hh
+<?php
 $root='http';
 if (!empty($_SERVER['HTTPS'])) {
 	$root+='s';

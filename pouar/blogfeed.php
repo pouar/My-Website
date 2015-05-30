@@ -1,4 +1,4 @@
-<?hh
+<?php
 if (!empty($_SERVER['HTTPS'])) {
 	$root='https://'.$_SERVER['HTTP_HOST'].'/pouar/';
 }
@@ -28,6 +28,7 @@ echo "<rss version=\"2.0\">
 			</link>
 		</image>";
 $items = [
+["The perfect VM","Sun, 12 Apr 2014 20:15:00 -0500",'Finally got the perfect VM for the kind of development I like, using LLVM I managed to compile and link an example program done in C to LLVM bytecode that runs with lli in a platform-independent manner. the file is here <a href="'.$root.'blog/xstreamos1.png">'],
 ["Some ISPs are blocking encryption","Mon, 13 Oct 2014 19:39:00 -0500","Found out some wireless ISPs are blocking encryption because the Net Neutrality rules don't apply to wireless when they obviously should<br><a href=https://www.techdirt.com/articles/20141012/06344928801/revealed-isps-already-violating-net-neutrality-to-block-encryption-make-everyone-less-safe-online.shtml>https://www.techdirt.com/articles/20141012/06344928801/revealed-isps-already-violating-net-neutrality-to-block-encryption-make-everyone-less-safe-online.shtml</a>"],
 ["The real reason why a replicater won't become a reality","Tue, 12 Oct 2014 12:21:00 -0500", "The real reason we won't see a replicator like the ones in Star Trek isn't because we can't make one. But because the companies who make them will put DRM in them and the DMCA will make it illegal for us to take the DRM out. The government will go along with this because the companies will say \"but think of the poor farmers/manufacturers/etc\" or something similar. I wouldn't be surprised if the government will require people to put DRM in those things."],
 ["PSA", "Tue, 17 Jun 2014 19:39:00 -0500", "There's a really cool illumos distro called OpenSXCE that has loads of potential, but it's currently a one man job (It's actually amazing he got it this far). Martin Bochnig , the guy who put it together, invested a shitload (to put it mildly) of time nad money into this. What I'm asking is if you're a Solaris/illumos developer, please help him out. Also donate if you can."],

@@ -1,4 +1,4 @@
-<?hh
+<?php
 $poweredby = [
 ["http://www.nginx.org ", "/pouar/nginx-logo.png"],
 ["http://hhvm.com", "/pouar/hhvm.png"],

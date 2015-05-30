@@ -1,4 +1,4 @@
-<?hh
+<?php
 putenv('GDFONTPATH=' . realpath('.'));
 header("Content-Type: image/png");
 $img = imagecreate(1280, 800);

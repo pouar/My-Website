@@ -1,4 +1,4 @@
-<?hh
+<?php
 echo '<!doctype html><html><head><title>My new website</title>';
 include_once "boilerplatetop.php";
 $news = new SimpleXMLElement('/pouar/',null,true);
