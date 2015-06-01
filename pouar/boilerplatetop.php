@@ -16,7 +16,7 @@ $toplinks = [
 ["/drupal", "Drupal"],
 ];
 echo '		<meta charset="UTF-8">
-		<link rel="icon" type="image/png" href="/pouar/marioskate.png" />
+		<link rel="icon" type="image/png" href="/pouar/diapericonarch_4.png" />
 		<link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.css">
 	</head>
 	<body>
@@ -24,7 +24,7 @@ echo '		<meta charset="UTF-8">
 			<tr>
 				<td>
 					<a href=/pouar/ style="background-color:initial;">
-						<img style="display:block;" src=/pouar/marioskatehq2x.png alt="image">
+						<img style="display:block;width:178px;" src=/pouar/downloads/fursona2.svgz alt="image">
 					</a>';
 foreach($toplinks as list($i, $j))
 {
