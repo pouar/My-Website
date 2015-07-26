@@ -24,7 +24,7 @@ echo '		<meta charset="UTF-8">
 			<tr>
 				<td>
 					<a href=/pouar/ style="background-color:initial;">
-						<img style="display:block;width:178px;" src=/pouar/downloads/fursona2.svgz alt="image">
+						<img style="display:block;width:178px;" src=/pouar/downloads/pouarlogo.svgz alt="image">
 					</a>';
 foreach($toplinks as list($i, $j))
 {
