@@ -37,7 +37,7 @@ foreach($files as $i)
 	?>
 				<tr>
 					<td class=td>
-						<a href="<?=rawurlencode($i)?>">'<?=$i?>'</a>
+						<a href="<?=rawurlencode($i)?>"><?=$i?></a>
 					</td>
 					<td class=td>
 	<?php
