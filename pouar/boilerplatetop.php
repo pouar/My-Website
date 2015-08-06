@@ -22,7 +22,7 @@ $toplinks = [
 	<body>
 		<table>
 			<tr>
-				<td>
+				<td style="vertical-align:top;">
 					<a href=/pouar/ style="background-color:initial;">
 						<img style="display:block;width:178px;" src=/pouar/downloads/pouarlogo.svgz alt="image">
 					</a><?php
