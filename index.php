@@ -1,5 +1,4 @@
-<?php
-echo '<!doctype html>
+<!doctype html>
 <html>
 	<head>
 		<title>
@@ -11,11 +10,15 @@ echo '<!doctype html>
 			width:33%;
 		}
 	</style>
-';
+<?php
 include_once $_SERVER['DOCUMENT_ROOT'].'/pouar/boilerplatetop.php';
 $files = scandir('.');
-echo "\n\t\t<div id=news style=\"position:relative;margin:50px;\">\n\t\t\t<h3 style=\"display:inline\">{$_SERVER['REQUEST_URI']}</h3>\n\t\t\t<hr>\n\t\t\t".php_uname();
-echo '
+?>
+
+		<div id=news style=\"position:relative;margin:50px;\">
+			<h3 style=\"display:inline\"><?=$_SERVER['REQUEST_URI']?></h3>
+			<hr>
+			<?=php_uname();?>
 			<table style="width:100%">
 				<tr>
 					<th class=td>
@@ -27,41 +30,44 @@ echo '
 					<th class=td>
 						mtime
 					</th>
-				</tr>';
+				</tr>
+<?php
 foreach($files as $i)
 {
-	echo '
+	?>
 				<tr>
 					<td class=td>
-						<a href="'.rawurlencode($i).'">'.$i.'</a>
+						<a href="<?=rawurlencode($i)?>">'<?=$i?>'</a>
 					</td>
 					<td class=td>
-						';
-	$filesize=filesize($i);
-	if($filesize>=1024000000)
-	{
-		echo ($filesize/1024000000).' GB';
-	}
-	else if($filesize>=1024000)
-	{
-		echo ($filesize/1024000).' MB';
-	}
-	else if($filesize>=1024)
-	{
-		echo ($filesize/1024).' KB';
-	}
-	else
-	{
-		echo $filesize.' Bytes';
-	}
-	echo '
+	<?php
+		$filesize=filesize($i);
+		if($filesize>=1024000000)
+		{
+			echo ($filesize/1024000000).' GB';
+		}
+		else if($filesize>=1024000)
+		{
+			echo ($filesize/1024000).' MB';
+		}
+		else if($filesize>=1024)
+		{
+			echo ($filesize/1024).' KB';
+		}
+		else
+		{
+			echo $filesize.' Bytes';
+		}
+	?>
 					</td>
 					<td class=td>
-						'.date('r',filemtime($i)).'
+						<?=date('r',filemtime($i))?>
 					</td>
-				</tr>';
+				</tr>
+	<?php
 }
-echo '
+?>
 			</table>
-		</div>';
+		</div>
+<?php
 include_once $_SERVER['DOCUMENT_ROOT'].'/pouar/boilerplatebot.php';

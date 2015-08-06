@@ -6,7 +6,7 @@ if (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off') {
 else {
 	$root='http://'.$_SERVER['HTTP_HOST'].'/pouar/';
 }
-echo "<rss version=\"2.0\">
+?><rss version="2.0">
 	<channel>
 		<title>
 			Pouar's Site Updates
@@ -15,19 +15,20 @@ echo "<rss version=\"2.0\">
 			what the title said
 		</description>
 		<link>
-			{$root}
+			<?=$root?>
 		</link>
 		<image>
 			<url>
-				{$root}marioskatehq4x.png
+				<?=$root?>marioskatehq4x.png
 			</url>
 			<title>
 				Pouar's Site
 			</title>
 			<link>
-				{$root}
+				<?=$root?>
 			</link>
-		</image>";
+		</image>
+<?php
 $items = [
 ["2014-07-07 11:05", "Mon, 07 Jul 2014 11:05:00 -0500", "In case my repo on Github gets hit with collateral damage from some overbroad/automated DMCA notice, you can download my repo from http://thepouar.dnsdojo.com/git/site.git"],
 ["2014-07-03 19:41", "Thu, 03 Jul 2014 19:41:00 -0500", "New site theme I found https://kristopolous.github.io/BOOTSTRA.386/"],
@@ -40,22 +41,23 @@ $items = [
 ];
 foreach($items as list($i, $j, $k))
 {
-	echo "
+	?>
 		<item>
 			<title>
-				{$i}
+				<?=$i?>
 			</title>
 			<pubDate>
-				{$j}
+				<?=$j?>
 			</pubDate>
 			<link>
-				{$root}
+				<?=$root?>
 			</link>
 			<description>
-				<![CDATA[{$k}]]>
+				<![CDATA[<?=$k?>]]>
 			</description>
-		</item>";
+		</item>
+	<?php
 }
-echo "
+?>
 	</channel>
-</rss>";
+</rss>

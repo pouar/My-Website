@@ -5,28 +5,27 @@ if (!empty($_SERVER['HTTPS'])) {
 else {
 	$root='http://'.$_SERVER['HTTP_HOST'].'/pouar/';
 }
-echo "<rss version=\"2.0\">
+?>
+<rss version="2.0">
 	<channel>
-		<title>
-			Pouar's Blog
-		</title>
+		<title>Pouar's Blog</title>
 		<description>
 			what the title said
 		</description>
 		<link>
-			{$root}
+			<?=$root?>
 		</link>
 		<image>
 			<url>
-				{$root}marioskatehq4x.png
+				<?=$root?>marioskatehq4x.png
 			</url>
 			<title>
 				Pouar's Site
 			</title>
 			<link>
-				{$root}
+				<?=$root?>
 			</link>
-		</image>";
+		</image><?php
 $items = [
 ["The perfect VM","Sun, 12 Apr 2014 20:15:00 -0500",'Finally got the perfect VM for the kind of development I like, using LLVM I managed to compile and link an example program done in C to LLVM bytecode that runs with lli in a platform-independent manner. the file is here <a href="'.$root.'blog/xstreamos1.png">'],
 ["Some ISPs are blocking encryption","Mon, 13 Oct 2014 19:39:00 -0500","Found out some wireless ISPs are blocking encryption because the Net Neutrality rules don't apply to wireless when they obviously should<br><a href=https://www.techdirt.com/articles/20141012/06344928801/revealed-isps-already-violating-net-neutrality-to-block-encryption-make-everyone-less-safe-online.shtml>https://www.techdirt.com/articles/20141012/06344928801/revealed-isps-already-violating-net-neutrality-to-block-encryption-make-everyone-less-safe-online.shtml</a>"],
@@ -38,44 +37,44 @@ if(isset($_GET['all']))
 {
 	foreach($items as list($i, $j, $k))
 	{
-		echo "
+		?>
 		<item>
 			<title>
-				{$i}
+				<?=$i?>
 			</title>
 			<pubDate>
-				{$j}
+				<?=$j?>
 			</pubDate>
 			<link>
-				{$root}
+				<?=$root?>
 			</link>
 			<description>
-				<![CDATA[{$k}]]>
+				<![CDATA[<?=$k?>]]>
 			</description>
-		</item>";
+		</item><?php
 	}
 }
 else
 {
 	for($i=0;$i<5;$i++)
 	{
-		echo "
+		?>
 		<item>
 			<title>
-				{$items[$i][0]}
+				<?=$items[$i][0]?>
 			</title>
 			<pubDate>
-				{$items[$i][1]}
+				<?=$items[$i][1]?>
 			</pubDate>
 			<link>
-				{$root}
+				<?=$root?>
 			</link>
 			<description>
-				<![CDATA[{$items[$i][2]}]]>
+				<![CDATA[<?=$items[$i][2]?>]]>
 			</description>
-		</item>";
+		</item><?php
 	}
 }
-echo "
+?>
 	</channel>
-</rss>";
+</rss>
