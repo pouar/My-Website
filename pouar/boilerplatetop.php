@@ -7,7 +7,7 @@ $root+='://'.$_SERVER['HTTP_HOST'].'/pouar/';
 $toplinks = [
 ["/drupal", "Blog"],
 ["/pouar/downloads", "Downloads"],
-["/pouar/form.php", "Joke form"],
+["/pouar/form.html", "Joke form"],
 ["/pouar/3dlogo.php", "3D logo in three.js"],
 ["/bugzilla", "Bug Tracker"],
 ["/drupal/?q=forum", "forum"],
